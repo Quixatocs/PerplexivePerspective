@@ -30,6 +30,11 @@ TextureImporter:
     21300046: UArrow
     21300048: DArrow
     21300050: LArrow
+    21300052: Stage1
+    21300054: Stage2
+    21300056: Stage3
+    21300058: Stage4
+    21300060: FinalStage
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -270,7 +275,7 @@ TextureImporter:
         width: 87
         height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -284,7 +289,7 @@ TextureImporter:
         width: 68
         height: 93
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -298,7 +303,7 @@ TextureImporter:
         width: 66
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -311,6 +316,76 @@ TextureImporter:
         y: 1857
         width: 95
         height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stage1
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 1751
+        width: 215
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stage2
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 1666
+        width: 232
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stage3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1583
+        width: 242
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Stage4
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1490
+        width: 245
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FinalStage
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 1870
+        width: 186
+        height: 137
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
