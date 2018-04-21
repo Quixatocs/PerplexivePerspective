@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class PlayerMovementController : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
+
+    private const string START_CHECKPOINT_TAG = "StartCheckpointTag";
 
     public float speed = 6.0F;
     public float jumpForce = 100.0F;
@@ -11,6 +13,25 @@ public class PlayerMovementController : MonoBehaviour {
     private bool isJumping = false;
     private WaitForSeconds jumpCooldown = new WaitForSeconds(0.5f);
 
+    private Vector3 checkpoint;
+
+
+    void OnEnable()
+    {
+        EventManager.death += ResetToCheckpoint;
+        EventManager.updateCheckpoint += UpdateCheckpoint;
+    }
+
+    void OnDisable()
+    {
+        EventManager.death -= ResetToCheckpoint;
+        EventManager.updateCheckpoint -= UpdateCheckpoint;
+    }
+
+    void Start()
+    {
+        checkpoint = GameObject.FindGameObjectWithTag(START_CHECKPOINT_TAG).transform.position;
+    }
 
     void Update()
     {
@@ -45,5 +66,17 @@ public class PlayerMovementController : MonoBehaviour {
         isJumping = false;
     }
 
-	
+    void ResetToCheckpoint()
+    {
+        Debug.Log("moved to last checkpoint");
+        transform.position = checkpoint;
+    }
+
+    void UpdateCheckpoint(Vector3 newCheckpointPosition)
+    {
+        Debug.Log("updated checkpoint");
+        checkpoint = newCheckpointPosition;
+    }
+
+
 }

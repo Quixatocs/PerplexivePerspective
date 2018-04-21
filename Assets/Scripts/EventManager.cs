@@ -6,11 +6,6 @@ public class EventManager : MonoBehaviour {
 
     public static EventManager instance = null;
 
-    public delegate void Jump();
-    public static event Jump jump;
-
-
-
     void Awake()
     {
         singleton();
@@ -24,12 +19,33 @@ public class EventManager : MonoBehaviour {
             Destroy(gameObject);
     }
 
+    public delegate void Jump();
+    public static event Jump jump;
 
+    public delegate void Death();
+    public static event Death death;
 
+    public delegate void UpdateCheckpoint(Vector3 newCheckpoint);
+    public static event UpdateCheckpoint updateCheckpoint;
+    
 
     public static void invokeSubscribersTo_Jump()
     {
         if (jump != null)
             jump();
     }
+
+    public static void invokeSubscribersTo_Death()
+    {
+        if (death != null)
+            death();
+    }
+
+    public static void invokeSubscribersTo_UpdateCheckpoint(Vector3 newCheckpoint)
+    {
+        if (updateCheckpoint != null)
+            updateCheckpoint(newCheckpoint);
+    }
+
+
 }
