@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour {
     private Vector3 checkpoint;
 
     public Transform testLevel2Transform;
+    public Transform testLevel3Transform;
 
 
     void OnEnable()
@@ -33,7 +34,7 @@ public class PlayerController : MonoBehaviour {
     {
         EventManager.death -= ResetToCheckpoint;
         EventManager.updateCheckpoint -= UpdateCheckpoint;
-        EventManager.levelComplete += GoToNextLevel;
+        EventManager.levelComplete -= GoToNextLevel;
     }
 
     void Start()
@@ -117,6 +118,11 @@ public class PlayerController : MonoBehaviour {
     public void GoToLevel2()
     {
         GoToNextLevel(testLevel2Transform.position);
+    }
+
+    public void GoToLevel3()
+    {
+        GoToNextLevel(testLevel3Transform.position);
     }
 
     public void GoToNextLevel(Vector3 newLevelTarget)
