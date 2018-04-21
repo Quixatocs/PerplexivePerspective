@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour {
 
     public float speed = 6.0F;
     public float jumpForce = 100.0F;
+
+    public Animator playerAnimator;
+
     private Vector3 moveDirection = Vector3.zero;
     private bool isJumping = false;
     private WaitForSeconds jumpCooldown = new WaitForSeconds(0.5f);
@@ -43,19 +46,30 @@ public class PlayerController : MonoBehaviour {
         if (isJumping == false && Input.GetButtonDown("Jump"))
         {
             isJumping = true;
+            playerAnimator.SetBool("Jumping", isJumping);
             GetComponent<Rigidbody>().AddForce(Vector2.up * jumpForce);
             EventManager.invokeSubscribersTo_Jump();
             StartCoroutine(jumpCooldownTimer());
         }
+        else
+        {
+            float xAbs = Mathf.Abs(moveDirection.x);
+            float zAbs = Mathf.Abs(moveDirection.z);
+            if (xAbs > 0 || zAbs > 0)
+            {
+                if (xAbs > zAbs)
+                {
+                    playerAnimator.SetFloat("LandMovement", xAbs);
+                }
+                else
+                {
+                    playerAnimator.SetFloat("LandMovement", zAbs);
+                }
+            }
+        }
 
-        if (moveDirection.x > 0f)
-        {
-            transform.localScale = new Vector3(-1f, transform.localScale.y, 1f);
-        }
-        else if (moveDirection.x < 0f)
-        {
-            transform.localScale = new Vector3(1f, transform.localScale.y, 1f);
-        }
+
+        
 
         transform.position += moveDirection * Time.deltaTime;
     }
@@ -64,6 +78,7 @@ public class PlayerController : MonoBehaviour {
     {
         yield return jumpCooldown;
         isJumping = false;
+        playerAnimator.SetBool("Jumping", isJumping);
     }
 
     void ResetToCheckpoint()
@@ -74,6 +89,11 @@ public class PlayerController : MonoBehaviour {
     void UpdateCheckpoint(Vector3 newCheckpointPosition)
     {
         checkpoint = newCheckpointPosition;
+    }
+
+    public Vector3 GetMovementDirection()
+    {
+        return moveDirection;
     }
 
 
