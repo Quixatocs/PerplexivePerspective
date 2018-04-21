@@ -7,6 +7,8 @@ TagManager:
   - DeathTag
   - CheckpointTag
   - StartCheckpointTag
+  - LevelCompleteTag
+  - MovingPlatformTag
   layers:
   - Default
   - TransparentFX

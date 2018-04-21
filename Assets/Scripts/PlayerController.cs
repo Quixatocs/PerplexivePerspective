@@ -14,21 +14,26 @@ public class PlayerController : MonoBehaviour {
 
     private Vector3 moveDirection = Vector3.zero;
     private bool isJumping = false;
+    private bool isMoving = false;
     private WaitForSeconds jumpCooldown = new WaitForSeconds(0.5f);
 
     private Vector3 checkpoint;
+
+    public Transform testLevel2Transform;
 
 
     void OnEnable()
     {
         EventManager.death += ResetToCheckpoint;
         EventManager.updateCheckpoint += UpdateCheckpoint;
+        EventManager.levelComplete += GoToNextLevel;
     }
 
     void OnDisable()
     {
         EventManager.death -= ResetToCheckpoint;
         EventManager.updateCheckpoint -= UpdateCheckpoint;
+        EventManager.levelComplete += GoToNextLevel;
     }
 
     void Start()
@@ -57,6 +62,7 @@ public class PlayerController : MonoBehaviour {
             float zAbs = Mathf.Abs(moveDirection.z);
             if (xAbs > 0 || zAbs > 0)
             {
+                isMoving = true;
                 if (xAbs > zAbs)
                 {
                     playerAnimator.SetFloat("LandMovement", xAbs);
@@ -66,7 +72,19 @@ public class PlayerController : MonoBehaviour {
                     playerAnimator.SetFloat("LandMovement", zAbs);
                 }
             }
+            else
+            {
+                isMoving = false;
+            }
         }
+
+        /*
+        if (isMoving || isJumping)
+        {
+            GetComponent<Rigidbody>().isKinematic = false;
+            transform.parent = null;
+        }
+        */
 
 
         
@@ -94,6 +112,19 @@ public class PlayerController : MonoBehaviour {
     public Vector3 GetMovementDirection()
     {
         return moveDirection;
+    }
+
+    public void GoToLevel2()
+    {
+        GoToNextLevel(testLevel2Transform.position);
+    }
+
+    public void GoToNextLevel(Vector3 newLevelTarget)
+    {
+        transform.position = newLevelTarget;
+        isJumping = true;
+        EventManager.invokeSubscribersTo_Jump();
+        StartCoroutine(jumpCooldownTimer());
     }
 
 

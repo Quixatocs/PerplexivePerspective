@@ -27,7 +27,10 @@ public class EventManager : MonoBehaviour {
 
     public delegate void UpdateCheckpoint(Vector3 newCheckpoint);
     public static event UpdateCheckpoint updateCheckpoint;
-    
+
+    public delegate void LevelComplete(Vector3 newLevel);
+    public static event LevelComplete levelComplete;
+
 
     public static void invokeSubscribersTo_Jump()
     {
@@ -45,6 +48,12 @@ public class EventManager : MonoBehaviour {
     {
         if (updateCheckpoint != null)
             updateCheckpoint(newCheckpoint);
+    }
+
+    public static void invokeSubscribersTo_LevelComplete(Vector3 newLevel)
+    {
+        if (levelComplete != null)
+            levelComplete(newLevel);
     }
 
 
