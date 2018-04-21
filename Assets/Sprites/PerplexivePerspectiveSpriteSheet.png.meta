@@ -16,6 +16,20 @@ TextureImporter:
     21300018: TimeWarp
     21300020: Exit
     21300022: Checkpoint
+    21300024: W
+    21300026: A
+    21300028: S
+    21300030: D
+    21300032: Jump
+    21300034: SmolArrow
+    21300036: MedArrow
+    21300038: BigArrow
+    21300040: Clock
+    21300042: SkipTime
+    21300044: RArrow
+    21300046: UArrow
+    21300048: DArrow
+    21300050: LArrow
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -122,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tut_W
+      name: W
       rect:
         serializedVersion: 2
-        x: 27
+        x: 82
         y: 1939
-        width: 78
-        height: 91
+        width: 52
+        height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,13 +150,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tut_A
+      name: A
       rect:
         serializedVersion: 2
-        x: 128
-        y: 1927
-        width: 110
-        height: 70
+        x: 177
+        y: 1938
+        width: 52
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,13 +164,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tut_S
+      name: S
       rect:
         serializedVersion: 2
-        x: 278
-        y: 1878
-        width: 85
-        height: 117
+        x: 280
+        y: 1939
+        width: 44
+        height: 61
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,13 +178,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tut_D
+      name: D
       rect:
         serializedVersion: 2
-        x: 410
-        y: 1915
-        width: 127
-        height: 89
+        x: 373
+        y: 1937
+        width: 50
+        height: 72
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,83 +192,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: UpArrow
+      name: Jump
       rect:
         serializedVersion: 2
-        x: 37
-        y: 1687
-        width: 79
-        height: 130
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: RightArrow
-      rect:
-        serializedVersion: 2
-        x: 145
-        y: 1713
-        width: 101
-        height: 82
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: DownArrow
-      rect:
-        serializedVersion: 2
-        x: 283
-        y: 1713
-        width: 71
-        height: 99
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: LeftArrow
-      rect:
-        serializedVersion: 2
-        x: 401
-        y: 1723
-        width: 93
-        height: 84
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Jump(Space)
-      rect:
-        serializedVersion: 2
-        x: 626
-        y: 1887
-        width: 258
-        height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: TimeWarp
-      rect:
-        serializedVersion: 2
-        x: 577
-        y: 1568
-        width: 359
-        height: 242
+        x: 456
+        y: 1867
+        width: 249
+        height: 146
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +209,38 @@ TextureImporter:
       name: Exit
       rect:
         serializedVersion: 2
-        x: 985
-        y: 1941
-        width: 125
-        height: 80
+        x: 253
+        y: 1760
+        width: 137
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Clock
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 1542
+        width: 149
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SkipTime
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1589
+        width: 148
+        height: 211
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,10 +251,66 @@ TextureImporter:
       name: Checkpoint
       rect:
         serializedVersion: 2
-        x: 962
-        y: 1754
-        width: 347
-        height: 177
+        x: 43
+        y: 1442
+        width: 338
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RArrow
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1848
+        width: 87
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: UArrow
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1830
+        width: 68
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DArrow
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1828
+        width: 66
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LArrow
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 1857
+        width: 95
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

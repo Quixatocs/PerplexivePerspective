@@ -10,8 +10,6 @@ public class LightDirectionController : MonoBehaviour {
     [Range(0,3)]
     public int startingRotationIndex;
 
-    new Light light; 
-
     float[] timeLightIntensities;
 
     [Range(0f, 1f)]
@@ -20,7 +18,6 @@ public class LightDirectionController : MonoBehaviour {
     void Start()
     {
         rotationIndex = startingRotationIndex;
-        light = GetComponent<Light>();
     }
 
 	void Update () {

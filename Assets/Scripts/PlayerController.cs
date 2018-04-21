@@ -68,13 +68,11 @@ public class PlayerController : MonoBehaviour {
 
     void ResetToCheckpoint()
     {
-        Debug.Log("moved to last checkpoint");
         transform.position = checkpoint;
     }
 
     void UpdateCheckpoint(Vector3 newCheckpointPosition)
     {
-        Debug.Log("updated checkpoint");
         checkpoint = newCheckpointPosition;
     }
 
