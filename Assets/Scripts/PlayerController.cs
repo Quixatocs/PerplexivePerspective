@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 
     public Transform testLevel2Transform;
     public Transform testLevel3Transform;
+    public Transform testGeyseyTransform;
 
 
     void OnEnable()
@@ -123,6 +124,11 @@ public class PlayerController : MonoBehaviour {
     public void GoToLevel3()
     {
         GoToNextLevel(testLevel3Transform.position);
+    }
+
+    public void GoToGeysey()
+    {
+        GoToNextLevel(testGeyseyTransform.position);
     }
 
     public void GoToNextLevel(Vector3 newLevelTarget)

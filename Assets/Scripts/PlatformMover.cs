@@ -47,7 +47,6 @@ public class PlatformMover : MonoBehaviour {
             FlipDestination();
         }
 
-        //transform.localPosition = Vector3.Lerp(startPosition, endPosition, pointAlongPath);
         rigidBody.MovePosition(Vector3.Lerp(startPosition + parentPosition.position, endPosition + parentPosition.position, pointAlongPath));
     }
 
