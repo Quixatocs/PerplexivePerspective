@@ -37,6 +37,9 @@ public class EventManager : MonoBehaviour {
     public delegate void BoffSound();
     public static event BoffSound boffSound;
 
+    public delegate void VoiceSound();
+    public static event VoiceSound voiceSound;
+
 
     public static void invokeSubscribersTo_Jump()
     {
@@ -72,6 +75,12 @@ public class EventManager : MonoBehaviour {
     {
         if (boffSound != null)
             boffSound();
+    }
+
+    public static void invokeSubscribersTo_VoiceSound()
+    {
+        if (voiceSound != null)
+            voiceSound();
     }
 
 

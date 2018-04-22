@@ -16,9 +16,11 @@ public class PlayerHitEventTriggers : MonoBehaviour {
     private const string SAT8_TAG = "Sat8Tag";
     private const string SAT9_TAG = "Sat9Tag";
 
-    WaitForSeconds checkpointCooldown = new WaitForSeconds(5f);
+    WaitForSeconds checkpointCooldownWait = new WaitForSeconds(5f);
 
-    
+    bool isAvailableToTrigger = true;
+
+
 
     void OnTriggerEnter(Collider other)
     {
@@ -29,8 +31,13 @@ public class PlayerHitEventTriggers : MonoBehaviour {
                 EventManager.invokeSubscribersTo_Death();
                 break;
             case CHECKPOINT_TAG:
-                EventManager.invokeSubscribersTo_UpdateCheckpoint(other.transform.position);
-                other.gameObject.GetComponent<CheckpointController>().TurnCheckpointOn();
+                if (isAvailableToTrigger)
+                {
+                    isAvailableToTrigger = false;
+                    StartCoroutine(CooldownCheckpoint());
+                    EventManager.invokeSubscribersTo_UpdateCheckpoint(other.transform.position);
+                    other.gameObject.GetComponent<CheckpointController>().TurnCheckpointOn();
+                }
                 break;
             case LEVEL_COMPLETE_TAG:
                 EventManager.invokeSubscribersTo_LevelComplete(other.gameObject.GetComponent<SendToNextLevel>().GetNextLevelTransform());
@@ -65,12 +72,14 @@ public class PlayerHitEventTriggers : MonoBehaviour {
    
     }
 
-    /*
-    void IEnumerator CooldownCheckpoint()
-    {
 
+    
+    IEnumerator CooldownCheckpoint()
+    {
+        yield return checkpointCooldownWait;
+        isAvailableToTrigger = true;
     }
-    */
+    
 
 
 }

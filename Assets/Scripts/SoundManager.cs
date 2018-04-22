@@ -25,6 +25,7 @@ public class SoundManager : MonoBehaviour {
         EventManager.jump += Play_JumpSound;
         EventManager.boffSound += Play_BoffSound;
         EventManager.updateCheckpoint += Play_CheckpointSound;
+        EventManager.voiceSound += Play_VoiceSound;
     }
 
     void OnDisable()
@@ -33,6 +34,7 @@ public class SoundManager : MonoBehaviour {
         EventManager.jump -= Play_JumpSound;
         EventManager.boffSound -= Play_BoffSound;
         EventManager.updateCheckpoint -= Play_CheckpointSound;
+        EventManager.voiceSound -= Play_VoiceSound;
     }
 
 

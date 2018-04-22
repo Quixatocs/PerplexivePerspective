@@ -47,6 +47,7 @@ public class RunStory : MonoBehaviour {
         foreach (GameObject item in storyText)
         {
             item.SetActive(true);
+            EventManager.invokeSubscribersTo_VoiceSound();
             yield return textWait;
             item.SetActive(false);
         }
