@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
     private Vector3 moveDirection = Vector3.zero;
     private bool isJumping = false;
     private bool isMoving = false;
-    private WaitForSeconds jumpCooldown = new WaitForSeconds(0.5f);
+    private WaitForSeconds jumpCooldown = new WaitForSeconds(1.4f);
 
     private Vector3 checkpoint;
 
