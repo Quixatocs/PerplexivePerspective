@@ -7,7 +7,18 @@ public class PlayerHitEventTriggers : MonoBehaviour {
     private const string DEATH_TAG = "DeathTag";
     private const string CHECKPOINT_TAG = "CheckpointTag";
     private const string LEVEL_COMPLETE_TAG = "LevelCompleteTag";
-    private const string MOVING_PLATFORM_TAG = "MovingPlatformTag";
+    private const string SAT2_TAG = "Sat2Tag";
+    private const string SAT3_TAG = "Sat3Tag";
+    private const string SAT4_TAG = "Sat4Tag";
+    private const string SAT5_TAG = "Sat5Tag";
+    private const string SAT6_TAG = "Sat6Tag";
+    private const string SAT7_TAG = "Sat7Tag";
+    private const string SAT8_TAG = "Sat8Tag";
+    private const string SAT9_TAG = "Sat9Tag";
+
+    WaitForSeconds checkpointCooldown = new WaitForSeconds(5f);
+
+    
 
     void OnTriggerEnter(Collider other)
     {
@@ -24,17 +35,42 @@ public class PlayerHitEventTriggers : MonoBehaviour {
             case LEVEL_COMPLETE_TAG:
                 EventManager.invokeSubscribersTo_LevelComplete(other.gameObject.GetComponent<SendToNextLevel>().GetNextLevelTransform());
                 break;
-            case MOVING_PLATFORM_TAG:
-                //Debug.Log("GotHere");
-                //GetComponent<Rigidbody>().isKinematic = true;
-                //transform.parent = other.transform;
-                //EventManager.invokeSubscribersTo_LevelComplete(other.gameObject.GetComponent<SendToNextLevel>().GetNextLevelTransform());
+            case SAT2_TAG:
+                EventManager.invokeSubscribersTo_TransitionMusic(1);
+                break;
+            case SAT3_TAG:
+                EventManager.invokeSubscribersTo_TransitionMusic(2);
+                break;
+            case SAT4_TAG:
+                EventManager.invokeSubscribersTo_TransitionMusic(3);
+                break;
+            case SAT5_TAG:
+                EventManager.invokeSubscribersTo_TransitionMusic(4);
+                break;
+            case SAT6_TAG:
+                EventManager.invokeSubscribersTo_TransitionMusic(5);
+                break;
+            case SAT7_TAG:
+                EventManager.invokeSubscribersTo_TransitionMusic(6);
+                break;
+            case SAT8_TAG:
+                EventManager.invokeSubscribersTo_TransitionMusic(7);
+                break;
+            case SAT9_TAG:
+                EventManager.invokeSubscribersTo_TransitionMusic(8);
                 break;
             default:
                 break;
-
         }
+   
+    }
 
+    /*
+    void IEnumerator CooldownCheckpoint()
+    {
 
     }
+    */
+
+
 }

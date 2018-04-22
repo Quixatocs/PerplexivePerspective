@@ -52,12 +52,15 @@ public class RunStory : MonoBehaviour {
         }
 
         stage1Text.SetActive(true);
+        EventManager.invokeSubscribersTo_BoffSound();
         yield return textWait;
 
         levelDetailsText.SetActive(true);
+        EventManager.invokeSubscribersTo_BoffSound();
         yield return textWait;
 
         controlsText.SetActive(true);
+        EventManager.invokeSubscribersTo_BoffSound();
         yield return textWait;
 
         playerController.enabled = true;

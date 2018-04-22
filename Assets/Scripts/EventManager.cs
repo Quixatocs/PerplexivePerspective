@@ -31,6 +31,12 @@ public class EventManager : MonoBehaviour {
     public delegate void LevelComplete(Vector3 newLevel);
     public static event LevelComplete levelComplete;
 
+    public delegate void TransitionMusic(int snapshotIndex);
+    public static event TransitionMusic transitionMusic;
+
+    public delegate void BoffSound();
+    public static event BoffSound boffSound;
+
 
     public static void invokeSubscribersTo_Jump()
     {
@@ -54,6 +60,18 @@ public class EventManager : MonoBehaviour {
     {
         if (levelComplete != null)
             levelComplete(newLevel);
+    }
+
+    public static void invokeSubscribersTo_TransitionMusic(int snapshotIndex)
+    {
+        if (transitionMusic != null)
+            transitionMusic(snapshotIndex);
+    }
+
+    public static void invokeSubscribersTo_BoffSound()
+    {
+        if (boffSound != null)
+            boffSound();
     }
 
 

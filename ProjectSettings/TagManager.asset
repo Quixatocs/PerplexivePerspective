@@ -9,6 +9,15 @@ TagManager:
   - StartCheckpointTag
   - LevelCompleteTag
   - MovingPlatformTag
+  - MusicTriggerTag
+  - Sat2Tag
+  - Sat3Tag
+  - Sat4Tag
+  - Sat5Tag
+  - Sat6Tag
+  - Sat7Tag
+  - Sat8Tag
+  - Sat9Tag
   layers:
   - Default
   - TransparentFX
