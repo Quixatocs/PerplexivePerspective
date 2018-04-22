@@ -35,6 +35,27 @@ TextureImporter:
     21300056: Stage3
     21300058: Stage4
     21300060: FinalStage
+    21300062: CrossingPaths
+    21300064: Squeeze
+    21300066: RidingShadows
+    21300068: HotRox
+    21300070: Babel
+    21300072: StayAWhile
+    21300074: 3-1
+    21300076: 3-3
+    21300078: 3-2
+    21300080: 2-3
+    21300082: 2-2
+    21300084: 2-1
+    21300086: STAGE1
+    21300088: STAGE2
+    21300090: FINALSTAGE
+    21300092: Movin'
+    21300094: 1-1
+    21300096: TimeSkipsNChill
+    21300098: 1-2
+    21300100: BabySteps
+    21300102: 1-3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -323,27 +344,181 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Stage1
+      name: CrossingPaths
       rect:
         serializedVersion: 2
-        x: 461
-        y: 1751
-        width: 215
-        height: 75
+        x: 1046
+        y: 1866
+        width: 294
+        height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Stage2
+      name: Squeeze
       rect:
         serializedVersion: 2
-        x: 457
-        y: 1666
+        x: 1067
+        y: 1748
+        width: 261
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RidingShadows
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 1568
+        width: 256
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HotRox
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 1415
+        width: 141
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Babel
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 1298
+        width: 193
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StayAWhile
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 1147
+        width: 226
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 3-1
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1121
+        width: 209
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 3-3
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 1291
         width: 232
-        height: 70
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 3-2
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 1438
+        width: 246
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 2-3
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 1592
+        width: 203
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 2-2
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 1734
+        width: 221
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 2-1
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 1886
+        width: 195
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: STAGE1
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1107
+        width: 709
+        height: 209
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -351,13 +526,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Stage3
+      name: STAGE2
       rect:
         serializedVersion: 2
-        x: 450
-        y: 1583
-        width: 242
-        height: 63
+        x: 95
+        y: 877
+        width: 724
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,13 +540,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Stage4
+      name: FINALSTAGE
       rect:
         serializedVersion: 2
-        x: 447
-        y: 1490
-        width: 245
-        height: 70
+        x: 145
+        y: 386
+        width: 692
+        height: 442
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,13 +554,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: FinalStage
+      name: Movin'
       rect:
         serializedVersion: 2
-        x: 790
-        y: 1870
-        width: 186
-        height: 137
+        x: 1074
+        y: 974
+        width: 219
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 1-1
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 941
+        width: 212
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TimeSkipsNChill
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 734
+        width: 354
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 1-2
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 741
+        width: 216
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BabySteps
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 546
+        width: 230
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: 1-3
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 546
+        width: 249
+        height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
